@@ -1,0 +1,544 @@
+/* ==============================================
+   GENEL STILLER - Ana CSS dosyası
+   Benim Notlarım - Kişisel Not Tutma Uygulaması
+   ============================================== */
+
+/* CSS Reset ve Temel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Değişkenleri (Custom Properties) */
+:root {
+    /* Renk Paleti */
+    --beyaz: #ffffff;
+    --acik-gri: #f8f9fa;
+    --orta-gri: #e9ecef;
+    --koyu-gri: #6c757d;
+    --cok-koyu-gri: #343a40;
+    --mavi: #007bff;
+    --koyu-mavi: #0056b3;
+    --yesil: #28a745;
+    --sari: #ffc107;
+    --kirmizi: #dc3545;
+    --turuncu: #fd7e14;
+
+    /* Gölge Renkleri */
+    --hafif-golge: rgba(0, 0, 0, 0.1);
+    --orta-golge: rgba(0, 0, 0, 0.15);
+    --koyu-golge: rgba(0, 0, 0, 0.2);
+
+    /* Tipografi */
+    --ana-font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --baslik-font: 'Georgia', serif;
+    --kod-font: 'Consolas', 'Monaco', monospace;
+
+    /* Boyutlar */
+    --maksimum-genislik: 1200px;
+    --kenarlık-yaricapi: 10px;
+    --kucuk-kenarlık: 5px;
+    --buyuk-kenarlık: 15px;
+
+    /* Boşluklar */
+    --kucuk-bosluk: 0.5rem;
+    --orta-bosluk: 1rem;
+    --buyuk-bosluk: 2rem;
+    --cok-buyuk-bosluk: 3rem;
+}
+
+/* Ana Body Stilleri */
+body {
+    font-family: var(--ana-font);
+    line-height: 1.6;
+    color: var(--cok-koyu-gri);
+    background-color: var(--acik-gri);
+    font-size: 16px;
+}
+
+/* Ana Kapsayıcı */
+.ana-kapsayici {
+    max-width: var(--maksimum-genislik);
+    margin: 0 auto;
+    padding: var(--orta-bosluk);
+    background-color: var(--beyaz);
+    min-height: 100vh;
+    box-shadow: 0 0 20px var(--hafif-golge);
+}
+
+/* ==============================================
+   HEADER (SAYFA BAŞLIĞI) STİLLERİ
+   ============================================== */
+
+.sayfa-basligi {
+    background-color: var(--beyaz);
+    color: var(--cok-koyu-gri);
+    padding: var(--buyuk-bosluk);
+    margin-bottom: var(--buyuk-bosluk);
+    border-radius: var(--kenarlık-yaricapi);
+    text-align: center;
+    box-shadow: 0 4px 12px var(--orta-golge);
+    border: 1px solid var(--orta-gri);
+}
+
+.baslik-icerigi {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ana-baslik {
+    font-family: var(--baslik-font);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: var(--kucuk-bosluk);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--orta-bosluk);
+}
+
+.ana-baslik i {
+    color: var(--mavi);
+    font-size: 2rem;
+}
+
+.baslik-aciklamasi {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* ==============================================
+   BÖLÜM BAŞLIKLARI
+   ============================================== */
+
+.bolum-basligi {
+    font-family: var(--baslik-font);
+    font-size: 1.5rem;
+    color: var(--cok-koyu-gri);
+    margin-bottom: var(--orta-bosluk);
+    display: flex;
+    align-items: center;
+    gap: var(--kucuk-bosluk);
+    padding-bottom: var(--kucuk-bosluk);
+    border-bottom: 2px solid var(--orta-gri);
+}
+
+.bolum-basligi i {
+    color: var(--mavi);
+    font-size: 1.3rem;
+}
+
+.not-sayisi {
+    font-size: 1rem;
+    color: var(--koyu-gri);
+    font-weight: normal;
+    margin-left: var(--kucuk-bosluk);
+}
+
+/* ==============================================
+   FORM STİLLERİ
+   ============================================== */
+
+.not-ekleme-bolumu {
+    background-color: var(--beyaz);
+    padding: var(--buyuk-bosluk);
+    margin-bottom: var(--buyuk-bosluk);
+    border-radius: var(--kenarlık-yaricapi);
+    box-shadow: 0 2px 10px var(--hafif-golge);
+    border: 1px solid var(--orta-gri);
+}
+
+.not-formu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--orta-bosluk);
+}
+
+.form-grubu {
+    display: flex;
+    flex-direction: column;
+    gap: var(--kucuk-bosluk);
+}
+
+.form-etiketi {
+    font-weight: 600;
+    color: var(--cok-koyu-gri);
+    font-size: 1rem;
+}
+
+.form-girisi,
+.form-secimi,
+.form-metin-alani {
+    padding: var(--orta-bosluk);
+    border: 2px solid var(--orta-gri);
+    border-radius: var(--kucuk-kenarlık);
+    font-size: 1rem;
+    font-family: var(--ana-font);
+    transition: all 0.3s ease;
+    background-color: var(--beyaz);
+}
+
+.form-girisi:focus,
+.form-secimi:focus,
+.form-metin-alani:focus {
+    outline: none;
+    border-color: var(--mavi);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.form-metin-alani {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.form-butonlari {
+    display: flex;
+    gap: var(--orta-bosluk);
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+/* ==============================================
+   BUTON STİLLERİ
+   ============================================== */
+
+.buton {
+    padding: var(--orta-bosluk) var(--buyuk-bosluk);
+    border: none;
+    border-radius: var(--kucuk-kenarlık);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: var(--kucuk-bosluk);
+    text-decoration: none;
+    background-color: var(--orta-gri);
+    color: var(--cok-koyu-gri);
+}
+
+.buton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px var(--orta-golge);
+}
+
+.buton:active {
+    transform: translateY(0);
+}
+
+.birincil-buton {
+    background-color: var(--mavi);
+    color: var(--beyaz);
+}
+
+.birincil-buton:hover {
+    background-color: var(--koyu-mavi);
+}
+
+.ikincil-buton {
+    background-color: var(--koyu-gri);
+    color: var(--beyaz);
+}
+
+.ikincil-buton:hover {
+    background-color: var(--cok-koyu-gri);
+}
+
+.tehlikeli-buton {
+    background-color: var(--kirmizi);
+    color: var(--beyaz);
+}
+
+.tehlikeli-buton:hover {
+    background-color: #c82333;
+}
+
+.basari-buton {
+    background-color: var(--yesil);
+    color: var(--beyaz);
+}
+
+.basari-buton:hover {
+    background-color: #218838;
+}
+
+/* ==============================================
+   ARAMA ve FİLTRE STİLLERİ
+   ============================================== */
+
+.not-arama-bolumu {
+    background-color: var(--beyaz);
+    padding: var(--buyuk-bosluk);
+    margin-bottom: var(--buyuk-bosluk);
+    border-radius: var(--kenarlık-yaricapi);
+    box-shadow: 0 2px 10px var(--hafif-golge);
+    border: 1px solid var(--orta-gri);
+}
+
+.arama-kontrolleri {
+    display: flex;
+    flex-direction: column;
+    gap: var(--orta-bosluk);
+}
+
+.arama-grubu {
+    display: flex;
+    gap: var(--kucuk-bosluk);
+}
+
+.arama-girisi {
+    flex: 1;
+    padding: var(--orta-bosluk);
+    border: 2px solid var(--orta-gri);
+    border-radius: var(--kucuk-kenarlık);
+    font-size: 1rem;
+}
+
+.arama-butonu {
+    padding: var(--orta-bosluk);
+    background-color: var(--mavi);
+    color: var(--beyaz);
+    border: none;
+    border-radius: var(--kucuk-kenarlık);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.arama-butonu:hover {
+    background-color: var(--koyu-mavi);
+}
+
+.filtre-grubu {
+    display: flex;
+    gap: var(--orta-bosluk);
+    flex-wrap: wrap;
+}
+
+.filtre-secimi {
+    padding: var(--kucuk-bosluk) var(--orta-bosluk);
+    border: 2px solid var(--orta-gri);
+    border-radius: var(--kucuk-kenarlık);
+    background-color: var(--beyaz);
+    font-size: 1rem;
+}
+
+/* ==============================================
+   NOTLAR LİSTESİ STİLLERİ
+   ============================================== */
+
+.notlar-bolumu {
+    background-color: var(--beyaz);
+    padding: var(--buyuk-bosluk);
+    border-radius: var(--kenarlık-yaricapi);
+    box-shadow: 0 2px 10px var(--hafif-golge);
+    border: 1px solid var(--orta-gri);
+}
+
+.notlar-listesi {
+    display: grid;
+    gap: var(--orta-bosluk);
+}
+
+.not-kartı {
+    background-color: var(--beyaz);
+    border: 1px solid var(--orta-gri);
+    border-radius: var(--kenarlık-yaricapi);
+    padding: var(--orta-bosluk);
+    box-shadow: 0 2px 8px var(--hafif-golge);
+    transition: all 0.3s ease;
+}
+
+.not-kartı:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px var(--orta-golge);
+}
+
+.not-basligi {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--cok-koyu-gri);
+    margin-bottom: var(--kucuk-bosluk);
+    display: flex;
+    align-items: center;
+    gap: var(--kucuk-bosluk);
+}
+
+.not-kategorisi {
+    display: inline-block;
+    padding: var(--kucuk-bosluk) var(--orta-bosluk);
+    background-color: var(--mavi);
+    color: var(--beyaz);
+    border-radius: var(--buyuk-kenarlık);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.not-icerigi {
+    color: var(--koyu-gri);
+    line-height: 1.6;
+    margin: var(--orta-bosluk) 0;
+}
+
+.not-tarihi {
+    font-size: 0.9rem;
+    color: var(--koyu-gri);
+    font-style: italic;
+}
+
+.not-eylemleri {
+    display: flex;
+    gap: var(--kucuk-bosluk);
+    margin-top: var(--orta-bosluk);
+    justify-content: flex-end;
+}
+
+.not-eylemleri .buton {
+    padding: var(--kucuk-bosluk) var(--orta-bosluk);
+    font-size: 0.9rem;
+}
+
+/* Kategori Renkleri */
+.kategori-genel {
+    background-color: var(--koyu-gri);
+}
+
+.kategori-is {
+    background-color: var(--mavi);
+}
+
+.kategori-kisisel {
+    background-color: var(--yesil);
+}
+
+.kategori-egitim {
+    background-color: var(--turuncu);
+}
+
+.kategori-proje {
+    background-color: var(--kirmizi);
+}
+
+/* ==============================================
+   BOŞ DURUM STİLLERİ
+   ============================================== */
+
+.bos-durum {
+    text-align: center;
+    padding: var(--cok-buyuk-bosluk);
+    color: var(--koyu-gri);
+}
+
+.bos-durum i {
+    font-size: 4rem;
+    color: var(--orta-gri);
+    margin-bottom: var(--orta-bosluk);
+}
+
+.bos-durum p {
+    font-size: 1.1rem;
+    margin-bottom: var(--kucuk-bosluk);
+}
+
+/* ==============================================
+   FOOTER STİLLERİ
+   ============================================== */
+
+.sayfa-alt-bilgisi {
+    margin-top: var(--buyuk-bosluk);
+    padding: var(--orta-bosluk);
+    background-color: var(--orta-gri);
+    border-radius: var(--kenarlık-yaricapi);
+    text-align: center;
+    color: var(--koyu-gri);
+}
+
+.alt-bilgi-icerigi p {
+    margin-bottom: var(--kucuk-bosluk);
+}
+
+.alt-bilgi-icerigi i {
+    color: var(--mavi);
+}
+
+.son-guncelleme {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ==============================================
+   YARDIMCI SINIFLAR
+   ============================================== */
+
+.gizli {
+    display: none !important;
+}
+
+.gorunu {
+    display: block !important;
+}
+
+.metin-merkez {
+    text-align: center;
+}
+
+.metin-sol {
+    text-align: left;
+}
+
+.metin-sag {
+    text-align: right;
+}
+
+.kenar-boslugu {
+    margin: var(--orta-bosluk);
+}
+
+.ic-bosluk {
+    padding: var(--orta-bosluk);
+}
+
+/* ==============================================
+   ANIMASYONLAR
+   ============================================== */
+
+@keyframes belirme {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.belirme-animasyonu {
+    animation: belirme 0.5s ease-out;
+}
+
+/* ==============================================
+   SCROLL BAR STİLLERİ (WebKit)
+   ============================================== */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--acik-gri);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--orta-gri);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--koyu-gri);
+}

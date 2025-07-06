@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Meta etiketleri - Sayfa hakkında bilgiler -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kişisel not tutma uygulaması - HTML, CSS ve JavaScript öğrenme projesi">
+    <meta name="author" content="Benim Notlarım">
+
+    <!-- Sayfa başlığı -->
+    <title>📝 Benim Notlarım - Kişisel Not Tutma Uygulaması</title>
+
+    <!-- CSS dosyalarını içe aktar -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font ikonu kütüphanesi -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Ana kapsayıcı -->
+    <div class="ana-kapsayici">
+
+        <!-- Sayfa başlığı ve navigasyon -->
+        <header class="sayfa-basligi">
+            <div class="baslik-icerigi">
+                <h1 class="ana-baslik">
+                    <i class="fas fa-sticky-note"></i>
+                    Benim Notlarım
+                </h1>
+                <p class="baslik-aciklamasi">Kişisel not tutma uygulaması</p>
+            </div>
+        </header>
+
+        <!-- Ana içerik alanı -->
+        <main class="ana-icerik">
+
+            <!-- Not ekleme formu -->
+            <section class="not-ekleme-bolumu">
+                <h2 class="bolum-basligi">
+                    <i class="fas fa-plus-circle"></i>
+                    Yeni Not Ekle
+                </h2>
+
+                <form class="not-formu" id="notFormu">
+                    <div class="form-grubu">
+                        <label for="notBasligi" class="form-etiketi">Not Başlığı:</label>
+                        <input type="text" id="notBasligi" name="notBasligi" class="form-girisi"
+                            placeholder="Not başlığınızı yazın..." required>
+                    </div>
+
+                    <div class="form-grubu">
+                        <label for="notKategorisi" class="form-etiketi">Kategori:</label>
+                        <select id="notKategorisi" name="notKategorisi" class="form-secimi">
+                            <option value="genel">Genel</option>
+                            <option value="is">İş</option>
+                            <option value="kisisel">Kişisel</option>
+                            <option value="egitim">Eğitim</option>
+                            <option value="proje">Proje</option>
+                        </select>
+                    </div>
+
+                    <div class="form-grubu">
+                        <label for="notIcerigi" class="form-etiketi">Not İçeriği:</label>
+                        <textarea id="notIcerigi" name="notIcerigi" class="form-metin-alani"
+                            placeholder="Notunuzu buraya yazın..." rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-butonlari">
+                        <button type="submit" class="buton birincil-buton">
+                            <i class="fas fa-save"></i>
+                            Notu Kaydet
+                        </button>
+                        <button type="reset" class="buton ikincil-buton">
+                            <i class="fas fa-eraser"></i>
+                            Formu Temizle
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- Not arama ve filtreleme -->
+            <section class="not-arama-bolumu">
+                <h2 class="bolum-basligi">
+                    <i class="fas fa-search"></i>
+                    Notları Ara ve Filtrele
+                </h2>
+
+                <div class="arama-kontrolleri">
+                    <div class="arama-grubu">
+                        <input type="text" id="aramaGirisi" class="arama-girisi" placeholder="Notlarınızda ara...">
+                        <button class="arama-butonu" id="aramaButonu">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="filtre-grubu">
+                        <select id="kategoriFiltresi" class="filtre-secimi">
+                            <option value="hepsi">Tüm Kategoriler</option>
+                            <option value="genel">Genel</option>
+                            <option value="is">İş</option>
+                            <option value="kisisel">Kişisel</option>
+                            <option value="egitim">Eğitim</option>
+                            <option value="proje">Proje</option>
+                        </select>
+
+                        <select id="tarihSiralamasi" class="filtre-secimi">
+                            <option value="yeni-eski">Yeni → Eski</option>
+                            <option value="eski-yeni">Eski → Yeni</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notlar listesi -->
+            <section class="notlar-bolumu">
+                <h2 class="bolum-basligi">
+                    <i class="fas fa-list"></i>
+                    Notlarım
+                    <span class="not-sayisi" id="notSayisi">(0)</span>
+                </h2>
+
+                <!-- Notlar burada görüntülenecek -->
+                <div class="notlar-listesi" id="notlarListesi">
+                    <!-- JavaScript ile dinamik olarak eklenecek -->
+                </div>
+
+                <!-- Boş durum mesajı -->
+                <div class="bos-durum" id="bosDurum">
+                    <i class="fas fa-clipboard"></i>
+                    <p>Henüz hiç notunuz yok.</p>
+                    <p>Yukarıdaki formu kullanarak ilk notunuzu ekleyin!</p>
+                </div>
+            </section>
+        </main>
+
+        <!-- Sayfa alt bilgileri -->
+        <footer class="sayfa-alt-bilgisi">
+            <div class="alt-bilgi-icerigi">
+                <p>
+                    <i class="fas fa-code"></i>
+                    Benim Notlarım - HTML, CSS ve JavaScript.
+                </p>
+                <p class="son-guncelleme">
+                    Son güncelleme: <span id="sonGuncelleme">-</span>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript dosyalarını içe aktar -->
+    <script src="js/yerelDepolama.js"></script>
+    <script src="js/notlar.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

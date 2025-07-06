@@ -1,0 +1,486 @@
+/* ==============================================
+   RESPONSIVE TASARIM - Mobil Uyumlu Stiller
+   Benim Notlarım - Kişisel Not Tutma Uygulaması
+   ============================================== */
+
+/* ==============================================
+   TABLET AYARLARI (768px ve altı)
+   ============================================== */
+
+@media (max-width: 768px) {
+
+    /* Ana kapsayıcı ayarları */
+    .ana-kapsayici {
+        padding: var(--kucuk-bosluk);
+        margin: 0;
+    }
+
+    /* Başlık ayarları */
+    .ana-baslik {
+        font-size: 2rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ana-baslik i {
+        font-size: 1.5rem;
+    }
+
+    .baslik-aciklamasi {
+        font-size: 1rem;
+    }
+
+    /* Bölüm başlıkları */
+    .bolum-basligi {
+        font-size: 1.3rem;
+        flex-wrap: wrap;
+    }
+
+    /* Form düzeni */
+    .form-butonlari {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .buton {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* Arama kontrolleri */
+    .arama-grubu {
+        flex-direction: column;
+    }
+
+    .arama-girisi {
+        margin-bottom: var(--kucuk-bosluk);
+    }
+
+    .filtre-grubu {
+        flex-direction: column;
+    }
+
+    .filtre-secimi {
+        width: 100%;
+    }
+
+    /* Not kartları */
+    .not-kartı {
+        padding: var(--orta-bosluk);
+    }
+
+    .not-basligi {
+        font-size: 1.1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--kucuk-bosluk);
+    }
+
+    .not-kategorisi {
+        align-self: flex-start;
+    }
+
+    .not-eylemleri {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .not-eylemleri .buton {
+        justify-content: center;
+    }
+
+    /* Bölüm boşlukları */
+    .not-ekleme-bolumu,
+    .not-arama-bolumu,
+    .notlar-bolumu {
+        padding: var(--orta-bosluk);
+        margin-bottom: var(--orta-bosluk);
+    }
+
+    /* Boş durum */
+    .bos-durum {
+        padding: var(--buyuk-bosluk);
+    }
+
+    .bos-durum i {
+        font-size: 3rem;
+    }
+}
+
+/* ==============================================
+   MOBİL AYARLARI (480px ve altı)
+   ============================================== */
+
+@media (max-width: 480px) {
+
+    /* Ana kapsayıcı */
+    .ana-kapsayici {
+        padding: var(--kucuk-bosluk);
+        box-shadow: none;
+    }
+
+    /* Başlık kısmı */
+    .sayfa-basligi {
+        padding: var(--orta-bosluk);
+        margin-bottom: var(--orta-bosluk);
+    }
+
+    .ana-baslik {
+        font-size: 1.8rem;
+    }
+
+    .ana-baslik i {
+        font-size: 1.3rem;
+    }
+
+    .baslik-aciklamasi {
+        font-size: 0.9rem;
+    }
+
+    /* Bölüm başlıkları */
+    .bolum-basligi {
+        font-size: 1.2rem;
+    }
+
+    .bolum-basligi i {
+        font-size: 1.1rem;
+    }
+
+    /* Form elemanları */
+    .form-girisi,
+    .form-secimi,
+    .form-metin-alani {
+        padding: var(--kucuk-bosluk);
+        font-size: 16px;
+        /* iOS zoom engellemek için */
+    }
+
+    .form-metin-alani {
+        min-height: 100px;
+    }
+
+    .form-etiketi {
+        font-size: 0.9rem;
+    }
+
+    /* Butonlar */
+    .buton {
+        padding: var(--orta-bosluk);
+        font-size: 0.9rem;
+    }
+
+    /* Arama */
+    .arama-girisi {
+        font-size: 16px;
+        /* iOS zoom engellemek için */
+    }
+
+    .arama-butonu {
+        padding: var(--orta-bosluk);
+        min-width: 50px;
+    }
+
+    /* Not kartları */
+    .not-kartı {
+        padding: var(--orta-bosluk);
+    }
+
+    .not-basligi {
+        font-size: 1rem;
+    }
+
+    .not-kategorisi {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    .not-icerigi {
+        font-size: 0.9rem;
+    }
+
+    .not-tarihi {
+        font-size: 0.8rem;
+    }
+
+    .not-eylemleri .buton {
+        padding: var(--kucuk-bosluk);
+        font-size: 0.8rem;
+    }
+
+    /* Bölüm boşlukları */
+    .not-ekleme-bolumu,
+    .not-arama-bolumu,
+    .notlar-bolumu {
+        padding: var(--orta-bosluk);
+        margin-bottom: var(--orta-bosluk);
+    }
+
+    /* Footer */
+    .sayfa-alt-bilgisi {
+        padding: var(--orta-bosluk);
+        font-size: 0.9rem;
+    }
+
+    /* Boş durum */
+    .bos-durum {
+        padding: var(--orta-bosluk);
+    }
+
+    .bos-durum i {
+        font-size: 2.5rem;
+    }
+
+    .bos-durum p {
+        font-size: 1rem;
+    }
+}
+
+/* ==============================================
+   KÜÇÜK MOBİL AYARLARI (320px ve altı)
+   ============================================== */
+
+@media (max-width: 320px) {
+
+    /* Ana başlık */
+    .ana-baslik {
+        font-size: 1.5rem;
+    }
+
+    .ana-baslik i {
+        font-size: 1.2rem;
+    }
+
+    /* Bölüm başlıkları */
+    .bolum-basligi {
+        font-size: 1.1rem;
+    }
+
+    /* Form elemanları */
+    .form-girisi,
+    .form-secimi,
+    .form-metin-alani {
+        padding: 8px;
+    }
+
+    /* Butonlar */
+    .buton {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+    }
+
+    /* Not kartları */
+    .not-kartı {
+        padding: 12px;
+    }
+
+    .not-basligi {
+        font-size: 0.95rem;
+    }
+
+    .not-kategorisi {
+        font-size: 0.65rem;
+        padding: 3px 6px;
+    }
+
+    .not-icerigi {
+        font-size: 0.85rem;
+    }
+
+    .not-tarihi {
+        font-size: 0.75rem;
+    }
+}
+
+/* ==============================================
+   BÜYÜK EKRAN AYARLARI (1200px ve üzeri)
+   ============================================== */
+
+@media (min-width: 1200px) {
+
+    /* Ana kapsayıcı */
+    .ana-kapsayici {
+        padding: var(--buyuk-bosluk);
+    }
+
+    /* Notlar için grid düzeni */
+    .notlar-listesi {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: var(--orta-bosluk);
+    }
+
+    /* Arama kontrolleri */
+    .arama-kontrolleri {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .arama-grubu {
+        flex: 1;
+        max-width: 400px;
+    }
+
+    .filtre-grubu {
+        margin-left: var(--orta-bosluk);
+    }
+
+    /* Form düzeni */
+    .form-butonlari {
+        justify-content: flex-start;
+    }
+}
+
+/* ==============================================
+   ÇOKLU SÜTUN DÜZEN (768px - 1200px arası)
+   ============================================== */
+
+@media (min-width: 768px) and (max-width: 1199px) {
+
+    /* Notlar için 2 sütun */
+    .notlar-listesi {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: var(--orta-bosluk);
+    }
+
+    /* Arama kontrolleri satır düzeni */
+    .arama-kontrolleri {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .arama-grubu {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .filtre-grubu {
+        flex-wrap: nowrap;
+    }
+}
+
+/* ==============================================
+   YÜKSEKLİK AYARLARI (Kısa ekranlar)
+   ============================================== */
+
+@media (max-height: 600px) {
+
+    /* Ana kapsayıcı */
+    .ana-kapsayici {
+        min-height: auto;
+    }
+
+    /* Başlık boyutunu küçült */
+    .sayfa-basligi {
+        padding: var(--orta-bosluk);
+    }
+
+    .ana-baslik {
+        font-size: 1.8rem;
+    }
+
+    /* Bölüm boşluklarını azalt */
+    .not-ekleme-bolumu,
+    .not-arama-bolumu,
+    .notlar-bolumu {
+        margin-bottom: var(--orta-bosluk);
+    }
+
+    /* Boş durum boşluğunu azalt */
+    .bos-durum {
+        padding: var(--orta-bosluk);
+    }
+}
+
+/* ==============================================
+   DOKUNMATIK AYARLARI
+   ============================================== */
+
+@media (hover: none) and (pointer: coarse) {
+
+    /* Butonlar için daha büyük dokunma alanı */
+    .buton {
+        min-height: 44px;
+        padding: var(--orta-bosluk) var(--buyuk-bosluk);
+    }
+
+    /* Form elemanları için daha büyük dokunma alanı */
+    .form-girisi,
+    .form-secimi,
+    .form-metin-alani {
+        min-height: 44px;
+        padding: var(--orta-bosluk);
+    }
+
+    /* Arama butonu */
+    .arama-butonu {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Not eylem butonları */
+    .not-eylemleri .buton {
+        min-height: 40px;
+        padding: var(--kucuk-bosluk) var(--orta-bosluk);
+    }
+
+    /* Hover efektlerini kaldır */
+    .buton:hover {
+        transform: none;
+        box-shadow: 0 2px 8px var(--hafif-golge);
+    }
+
+    .not-kartı:hover {
+        transform: none;
+        box-shadow: 0 2px 8px var(--hafif-golge);
+    }
+}
+
+/* ==============================================
+   YAZDIRMA AYARLARI
+   ============================================== */
+
+@media print {
+
+    /* Gereksiz elemanları gizle */
+    .not-ekleme-bolumu,
+    .not-arama-bolumu,
+    .sayfa-alt-bilgisi {
+        display: none;
+    }
+
+    /* Sayfa ayarları */
+    .ana-kapsayici {
+        max-width: none;
+        padding: 0;
+        box-shadow: none;
+        background: white;
+    }
+
+    /* Başlık */
+    .sayfa-basligi {
+        background: white !important;
+        color: black !important;
+        box-shadow: none;
+        border: 2px solid black !important;
+    }
+
+    /* Not kartları */
+    .not-kartı {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+        margin-bottom: var(--orta-bosluk);
+    }
+
+    /* Renkleri beyaz/siyah yap */
+    * {
+        color: black !important;
+        background: white !important;
+    }
+
+    /* Butonları gizle */
+    .not-eylemleri {
+        display: none;
+    }
+}
